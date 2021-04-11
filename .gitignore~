@@ -1,3 +1,4 @@
 serverless.dev.yml
 .json
-/node_module
+/node_modules
+node_modules/
