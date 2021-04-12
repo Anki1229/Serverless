@@ -1,20 +1,20 @@
 service: testlambdadeploy
 
-plugins:
-    - serverless-secrets-plugin
 
 provider:
    name: aws
    runtime: nodejs10.10
    stage: dev
    region: eu-west-2
+   role: arn:aws:iam::601411106774:role/lambdaroledemo
 
-   resources:
-    Resources:
-       MyBucket:
-         Type: AWS::S3::Bucketww111
-         Properties:
-            BucketName: ${self:service}-${self:provider.stage}-randomtext
+
+resources:
+  Resources:
+     MyBucket:
+       Type: AWS::S3::Bucketww111
+       Properties:
+          BucketName: ${self:service}-${self:provider.stage}-randomtext
 
 
 
