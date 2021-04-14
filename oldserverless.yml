@@ -1,0 +1,23 @@
+service: deployec2
+
+plugins:
+  - serverless-plugin-typescipt
+
+provider:
+   name: aws
+   runtime: nodejs10.10
+   stage: ${file(config/config.dev.json):stage.environment} 
+   region: ap-south-1
+   role: arn:aws:iam::601411106774:role/lambdaroledemo
+
+
+resources:
+  Resources:
+     MyEC2Instance2:
+       Type: AWS::EC2::Instance
+       Properties:
+          InstanceType: t2.micro
+          ImageId: ami-0bcf5425cdc1d8a85
+          SecurityGroupIds: 
+              ${file(config/config.dev.json):SecurityGroup.Id}
+          

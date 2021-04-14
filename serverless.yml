@@ -1,22 +1,18 @@
-service: testlambdadeploy
+service: testsecret
 
+plugins:
+  - serverless-secrets-mgr-plugin
 
-provider:
-   name: aws
-   runtime: nodejs10.10
-   stage: dev
-   region: eu-west-2
-   role: arn:aws:iam::601411106774:role/lambdaroledemo
-
+custom:
+  secrets:
+    # secretId: ${self:service}/${opt:stage}
+    variableNames: 
+      - ENV_VAR_1
+      - ENV_VAR_2
 
 resources:
   Resources:
-     MyBucket:
-       Type: AWS::S3::Bucketww111
-       Properties:
-          BucketName: ${self:service}-${self:provider.stage}-randomtext
-
-
-
-
-
+    Secrets:
+      Type: AWS::SecretsManager::Secret
+      Properties: 
+        Name: ${self:service}/${opt:stage}
