@@ -1,11 +1,10 @@
 # Serverless
-As Kanye West said:
+# Sometimes you want bullet points:
 
-> We're living the future so
-> the present is our past.
-After that you need to add the plugin to your serverless.yml of you service.
+* Start a line with a star
+* Profit!
 
-Run the command serverless --help and verify the list of commands contain an encrypt and a decrypt command.
+## Run the command serverless --help and verify the list of commands contain an encrypt and a decrypt command.
 
 > Coffee. The finest organic suspension ever devised... I beat the Borg with it.
 > - Captain Janeway
