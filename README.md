@@ -2,7 +2,9 @@
 ## Sometimes you want bullet points:
 
 * Start a line with a star
-* Profit!
+* Profit! : 
+  - and this shall work too
+  - this as well
 
 ## Run the command serverless --help and verify the list of commands contain an encrypt and a decrypt command.
 
