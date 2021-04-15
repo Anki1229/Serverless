@@ -1,18 +1,23 @@
 service: testsecret
 
-plugins:
-  - serverless-secrets-mgr-plugin
-
-custom:
-  secrets:
-    # secretId: ${self:service}/${opt:stage}
-    variableNames: 
-      - ENV_VAR_1
-      - ENV_VAR_2
+provider:
+   name: aws
+   runtime: nodejs10.10
+   stage: dev
+   region: ap-south-1
 
 resources:
   Resources:
     Secrets:
       Type: AWS::SecretsManager::Secret
       Properties: 
-        Name: ${self:service}/${opt:stage}
+        Name: ${self:service}.dev.random
+        GenerateSecretString:
+        SecretStringTemplate: !Sub '{"username": "${!Ref RDSUserName}"}'
+        GenerateStringKey: 'password'
+        PasswordLength: 16
+        ExcludeCharacters: '"@/\'
+      Tags:
+        -
+          Key: AppNam
+          Value: MyApp
