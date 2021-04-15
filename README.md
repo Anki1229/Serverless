@@ -1,6 +1,11 @@
 # Serverless
+Install
 
-http://www.github.com/
+npm install --save-dev serverless-secrets-plugin
+
+After that you need to add the plugin to your serverless.yml of you service.
+
+Run the command serverless --help and verify the list of commands contain an encrypt and a decrypt command.
 
 > Coffee. The finest organic suspension ever devised... I beat the Borg with it.
 > - Captain Janeway
