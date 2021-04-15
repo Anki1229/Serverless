@@ -10,7 +10,12 @@ Please enter the required plugin name and version in the serverless.yml and plug
 
 Quick Start
 
-    Install via npm:
+   1. Item 1
+1. Item 2
+1. Item 3
+   1. Item 3a
+   2. 
+   3.   Install via npm:
 
 npm install -g serverless
 
