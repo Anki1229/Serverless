@@ -4,6 +4,13 @@ http://www.github.com/
 
 > Coffee. The finest organic suspension ever devised... I beat the Borg with it.
 > - Captain Janeway
+> 
+
+Serverless Credentials Plugin
+
+IMPORTANT NOTE: As pointed out in the AWS documentation for storing sensible information Amazon recommends to use AWS KMS instead of environment variables like this plugin.
+
+serverless npm version license
 
 # Structured documents
 
