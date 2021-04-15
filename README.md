@@ -1,8 +1,8 @@
 # Serverless
-Install
+As Kanye West said:
 
-npm install --save-dev serverless-secrets-plugin
-
+> We're living the future so
+> the present is our past.
 After that you need to add the plugin to your serverless.yml of you service.
 
 Run the command serverless --help and verify the list of commands contain an encrypt and a decrypt command.
